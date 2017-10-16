@@ -1,0 +1,13 @@
+.button_done {
+  width: 100%;
+}
+
+.order_box {
+  overflow: auto;
+  min-height: 270px;
+}
+
+
+.qwerty {
+  min-height: 200px;
+}

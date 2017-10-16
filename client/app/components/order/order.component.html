@@ -1,0 +1,52 @@
+<div class="col-lg-3 al_left custum_height_name"><h6 class="cust_title"><span class="glyphicon glyphicon-home" style="right: 6px;"></span>Název společnosti</h6><p>{{company_name}}</p></div>
+<div class="col-lg-3 col-lg-offset-1 al_center custum_height_name"><h6 class="cust_title">Číslo objednávky</h6><p>{{order_id}}</p></div>
+      <div class="col-lg-3 col-lg-offset-2 al_right"></div>
+
+    <div class="col-lg-10 col-lg-offset-1 info_box">
+      <input  (change)="FindOrders($event)"  [(ngModel)]="filterName" name="filterName" type="text" class="form-control"  placeholder="Kod">
+      <div class="order_box">
+      <table class="table table-striped ">
+        <tr>
+          <td class="active"><p class="cust_title">EAN</p></td>
+          <td class="active"><p class="cust_title">Zabaleno</p></td>
+          <td class="active"><p class="cust_title">Kód zboží</p></td>
+          <td class="active"><p class="cust_title">Množství</p></td>
+          <td class="active"><p class="cust_title">Položka</p></td>
+          <td class="active"><p class="cust_title">Obrázek</p></td>
+        </tr>
+        <tr *ngFor="let orders of orders_item">
+          <td><p>{{orders.ean}}</p></td>
+          <td ><p>
+            <span *ngIf="!orders.complided" class="glyphicon glyphicon-share"></span>
+            <span *ngIf="orders.complided" class="glyphicon glyphicon-check" style="color:green; font-size: 17px;"></span></p>
+          </td>
+          <td ><p>{{orders.code}}</p></td>
+          <td ><p>{{orders.infakts}} / {{orders.amount}}</p></td>
+          <td ><p>{{orders.name}}</p></td>
+          <td ><p>{{orders.image}}</p></td>
+        </tr>
+      </table>
+      </div>
+      <button (click)="Save_order()" type="button" class="btn btn-success button_done">Hotovo</button>
+    </div>
+
+      <div class="input_data">
+        <h5 class="cust_title">Kód zboží</h5>
+        <input  (change)="EnterCodeItem($event)" [(ngModel)]="filterCode" name="filterCode" type="text" class="form-control input_code"  placeholder="Code item">
+        <h5 class="cust_title">Kód Supervisor</h5>
+        <input  (change)="CheckSuperViser($event)" [(ngModel)]="filterViser" name="filterViser" type="text" class="form-control input_super"  placeholder="Code Supervisor">
+      </div>
+
+      <div *ngIf="!modal_window" class="custum_modal"  >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-body custum_modal_pad">
+              <div class="row">
+                <span class="cust_gl glyphicon glyphicon-ok-circle"></span><h5 class="modal-title" >Well Done</h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>

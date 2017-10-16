@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+  <div class="modal fade in center_login"  style="display: block; padding-left: 17px;">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+          <div class="dropdown">
+            <button class="custum btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Please, select your name
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li *ngFor="let user of users">
+                <a [routerLink]="['/work',{foo:user.ean}]" >{{user.firstname}} {{user.lastname}} /
+                  <span *ngIf="user.superuser">Super user</span>
+                  <span *ngIf="!user.superuser">Staff</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>

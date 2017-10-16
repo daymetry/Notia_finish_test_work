@@ -1,0 +1,19 @@
+<div class="container col-lg-12">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1 info_box">
+      <div class="col-lg-3 al_left"><p>Přihlášený uživatel</p></div>
+      <div class="col-lg-3 col-lg-offset-1 al_center"><p><span class="qw glyphicon glyphicon-user"></span>{{nameUser}}
+        <span *ngIf="superUser">Super user</span>
+        <span *ngIf="!superUser">Staff</span></p>
+      </div>
+      <div class="col-lg-3 col-lg-offset-2 al_right">
+        <button type="button" [routerLink]="['/']" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"> </span> Exit</button></div>
+
+      <div class="col-lg-3 al_left"></div>
+      <div class="col-lg-3 col-lg-offset-1 al_center"></div>
+      <div class="col-lg-3 col-lg-offset-2 al_right"><p>{{myday}}</p></div>
+      <app-order></app-order>
+    </div>
+
+  </div>
+</div>

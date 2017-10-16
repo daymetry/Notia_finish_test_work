@@ -1,0 +1,78 @@
+.button_done {
+  width: 100%;
+}
+
+.order_box {
+  overflow: auto;
+  height: 310px;
+}
+
+.custum_modal
+{
+  position: absolute;
+  left: 39%;
+  top: 40%;
+}
+.btn-success {
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.58);
+}
+
+.custum_modal > div:nth-child(1)
+{
+  width: 200px;
+}
+.custum_modal_pad
+{
+  padding: 20px 0 20px 25px;
+}
+
+.custum_modal  h5 {
+
+  padding: 10px 0 0 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.cust_gl {
+  float: left;
+  padding: 0px 15px 0 0;
+  font-size: 2.3em;
+  color: green;
+}
+.input_data {
+  position: absolute;
+  left: -10%;
+  background-color: rgba(253, 253, 253, 0.65);
+  padding: 9px;
+  top: 58%;
+  border-radius: 6px;
+  box-shadow: -2px 5px 13px black;
+
+}
+
+.cust_title {
+  font-size: 13px;
+  color: #313131;
+  font-weight: 900;
+}
+.custum_height_name {
+  height: 64px;
+}
+.al_left {
+  text-align: left;
+}
+
+.al_center {
+  text-align: center;
+}
+
+.al_right {
+  text-align: right;
+}
+
+ p {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #8a8a8a;
+}

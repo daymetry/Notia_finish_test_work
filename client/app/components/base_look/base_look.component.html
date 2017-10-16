@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-lg-6 qwerty">
+      <table class="table table-striped">
+        <h5>Users</h5>
+        <tr>
+          <td class="active">ean</td>
+          <td class="active">firstname</td>
+          <td class="active">lastname</td>
+          <td class="active">superuser</td>
+        </tr>
+        <tr *ngFor="let user of users">
+          <td >{{user.ean}}</td>
+          <td >{{user.firstname}}</td>
+          <td >{{user.lastname}}</td>
+          <td >{{user.superuser}}</td>
+
+        </tr>
+      </table>
+    </div>
+  <div class="col-lg-6 qwerty">
+    <table class="table table-striped">
+      <h5>Orders</h5>
+      <tr>
+        <td class="active">ean</td>
+        <td class="active">customer_ean</td>
+        <td class="active">changed_by</td>
+        <td class="active">date_changed</td>
+        <td class="active">state</td>
+      </tr>
+
+      <tr *ngFor="let user of orders">
+        <td >{{user.ean}}</td>
+        <td >{{user.customer_ean}}</td>
+        <td >{{user.changed_by}}</td>
+        <td >{{user.date_changed}}</td>
+        <td >{{user.state}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-lg-6 qwerty">
+    <table class="table table-striped">
+      <h5>Order_items</h5>
+      <tr>
+        <td class="active">ean</td>
+        <td class="active">order_ean</td>
+        <td class="active">code</td>
+        <td class="active">amount</td>
+        <td class="active">name</td>
+        <td class="active">packed_by</td>
+        <td class="active">date_packed</td>
+        <td class="active">image</td>
+      </tr>
+      <tr *ngFor="let user of order_items">
+        <td >{{user.ean}}</td>
+        <td >{{user.order_ean}}</td>
+        <td >{{user.code}}</td>
+        <td >{{user.amount}}</td>
+        <td >{{user.name}}</td>
+        <td >{{user.packed_by}}</td>
+        <td >{{user.date_packed}}</td>
+        <td >{{user.image}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-lg-6 qwerty">
+    <table class="table table-striped">
+      <h5>Customers</h5>
+      <tr>
+        <td class="active">ean</td>
+        <td class="active">firstname</td>
+        <td class="active">lastname</td>
+
+      </tr>
+        <tr *ngFor="let user of customers">
+        <td >{{user.ean}}</td>
+        <td >{{user.firstname}}</td>
+        <td >{{user.lastname}}</td>
+
+
+      </tr>
+    </table>
+  </div>
+</div>
