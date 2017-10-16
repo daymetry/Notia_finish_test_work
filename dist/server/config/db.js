@@ -10,10 +10,10 @@ var DbConfig;
     //   PORT: 5432
     // };
     DbConfig.DB = {
-        HOST: 'horton.elephantsql.com',
-        DATABASE: 'pscealfa',
-        USER: 'pscealfa',
-        PASSWORD: 'Kz1WgTl5jZ_NBqejB3SgIqFhnxhMIuGd',
+        HOST: 'localhost',
+        DATABASE: 'dit_develop',
+        USER: 'developer',
+        PASSWORD: 'developer',
         PORT: 5432
     };
 })(DbConfig = exports.DbConfig || (exports.DbConfig = {}));
